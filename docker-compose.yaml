@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    container_name: django_crud
+    volumes:
+      - .:/app
+    ports: 
+      - "8000:8000"
