@@ -1,3 +1,3 @@
-*CRUD simples com Django*
+**CRUD simples com Django**
 
-Estudos Django, Docker e *NGinx*
+Estudos Django, Docker e **NGinx**
