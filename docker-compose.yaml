@@ -11,6 +11,17 @@ services:
     networks:
       - nginx_net
 
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "5173:80" 
+    networks:
+      - nginx_net
+    restart: unless-stopped
+
   nginx:
     image: nginx:latest
     ports: 
@@ -22,3 +33,4 @@ services:
       - ./frontend/dist:/usr/share/nginx/html:ro
     depends_on:
       - app
+      - frontend

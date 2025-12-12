@@ -33,8 +33,6 @@ def delete(request, id):
     pessoa.delete()
     return redirect('home')
 
-
-# 🔥 API: desabilitar CSRF
 @csrf_exempt
 def pessoas_api(request):
     if request.method == 'GET':
@@ -54,8 +52,6 @@ def pessoas_api(request):
 
     return HttpResponseBadRequest()
 
-
-# 🔥 API: desabilitar CSRF
 @csrf_exempt
 def pessoa_api(request, id):
     try:
