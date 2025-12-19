@@ -17,7 +17,7 @@ export default function Home() {
 
   async function criarPessoa(data) {
     await api.post("pessoas/", data);
-    load(); // recarrega lista
+    load(); 
   }
 
   async function deletar(id) {
